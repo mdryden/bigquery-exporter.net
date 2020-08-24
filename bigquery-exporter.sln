@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bigquery-exporter", "src\bigquery-exporter.csproj", "{B715783B-DF1E-4FD3-87EA-28B2650B101D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{48A0E00C-872D-444E-A5D4-BC3DF90DA655}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bigquery-exporter-tests", "test\bigquery-exporter-tests.csproj", "{0045E598-6388-4304-BF8E-5B540F1D913C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{CE6044C7-7808-4B3B-BC23-B9E94A7D007D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5E288301-B106-403D-93B1-E6BBBC0D96ED}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B715783B-DF1E-4FD3-87EA-28B2650B101D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B715783B-DF1E-4FD3-87EA-28B2650B101D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B715783B-DF1E-4FD3-87EA-28B2650B101D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B715783B-DF1E-4FD3-87EA-28B2650B101D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0045E598-6388-4304-BF8E-5B540F1D913C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0045E598-6388-4304-BF8E-5B540F1D913C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0045E598-6388-4304-BF8E-5B540F1D913C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0045E598-6388-4304-BF8E-5B540F1D913C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B715783B-DF1E-4FD3-87EA-28B2650B101D} = {48A0E00C-872D-444E-A5D4-BC3DF90DA655}
+		{0045E598-6388-4304-BF8E-5B540F1D913C} = {CE6044C7-7808-4B3B-BC23-B9E94A7D007D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A3DC571F-B0C8-4090-85AA-0959AB9918D5}
+	EndGlobalSection
+EndGlobal
