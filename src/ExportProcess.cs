@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
+using System.Linq;
 using System.Reflection;
 
 namespace mdryden.tools.bigquery_exporter
@@ -14,8 +16,22 @@ namespace mdryden.tools.bigquery_exporter
 
                 Console.WriteLine($"Exporting {type.FullName}");
 
-                var serializer = new Serializer();
-                serializer.Serialize(type);
+                var definitions = type.GetDefinitions().ToList();
+
+                foreach (var definition in definitions.Where(p => string.IsNullOrEmpty(p.Type)))
+                {
+                    var result = TypePrompt.Show(definition);
+
+                    if (!result.RemoveProperty)
+                        definition.Type = result.SelectedType;
+                }
+
+                definitions.RemoveAll(d => string.IsNullOrEmpty(d.Type));
+
+                var json = JsonConvert.SerializeObject(definitions, Formatting.Indented);
+
+
+                Console.WriteLine(json);
             }
             catch (ExportException ex)
             {
