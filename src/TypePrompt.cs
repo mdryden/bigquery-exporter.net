@@ -27,14 +27,14 @@ namespace mdryden.tools.bigquery_exporter
                 {
                     Console.WriteLine($"[{kvp.Key}] {kvp.Value}");
                 }
-                var input = Console.ReadKey().KeyChar.ToString();
+                var input = Prompt.ReadLine();
                 Console.WriteLine();
 
                 if (recommendations.ContainsKey(input))
                 {
                     return input == skip
                         ? TypePromptResult.Remove()
-                        : TypePromptResult.Select(input);
+                        : TypePromptResult.Select(recommendations[input]);
                 }
                 else
                 {

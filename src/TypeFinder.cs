@@ -105,7 +105,7 @@ namespace mdryden.tools.bigquery_exporter
                     Console.WriteLine($"[{selection.Key}] {selection.Value.FullName}");
                 }
 
-                var input = Console.ReadKey().KeyChar.ToString();
+                var input = Prompt.ReadLine();
                 Console.WriteLine();
 
                 if (selections.ContainsKey(input))

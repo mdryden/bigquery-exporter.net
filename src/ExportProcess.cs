@@ -15,6 +15,7 @@ namespace mdryden.tools.bigquery_exporter
                 var type = typeFinder.Find(options.DllPath, options.ClassSearch);
 
                 Console.WriteLine($"Exporting {type.FullName}");
+                Console.WriteLine();
 
                 var definitions = type.GetDefinitions().ToList();
 
