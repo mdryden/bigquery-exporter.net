@@ -9,7 +9,6 @@ namespace mdryden.tools.bigquery_exporter
         {
             Console.WriteLine($"Unable to map '{definition.Name}' ({definition.Property.PropertyType.Name}), please select an option:\r\n");
 
-            const string skip = "Ignore Property";
             var recommendations = new Dictionary<string, string>();
 
             var count = 1;
@@ -18,7 +17,9 @@ namespace mdryden.tools.bigquery_exporter
                 recommendations.Add(count.ToString(), recommendation);
                 count++;
             }
-            recommendations.Add(count.ToString(), skip);
+
+            var skip = count.ToString();
+            recommendations.Add(skip, "Ignore Property");
 
             while (true)
             {
